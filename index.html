@@ -1,191 +1,499 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Your Name – Personal Site</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    :root {
-      --bg: #fafafa;
-      --text: #333;
-      --accent: #2563eb;
-      --card-bg: #ffffff;
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
-    a { color: var(--accent); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    
-    /* Header */
-    header { background: var(--card-bg); padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 4px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; }
-    .logo { font-weight: 700; font-size: 1.25rem; }
-    nav ul { list-style: none; display: flex; gap: 1.5rem; }
-    nav a { font-weight: 500; color: var(--text); }
-    
-    /* Hero */
-    .hero { text-align: center; padding: 4rem 1rem; }
-    .hero img { width: 140px; height: 140px; border-radius: 50%; object-fit: cover; box-shadow: 0 4px 12px rgba(0,0,0,0.1); margin-bottom: 1rem; }
-    .hero h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
-    .hero p { font-size: 1.25rem; color: #666; max-width: 600px; margin: 0 auto; }
-    
-    /* Sections */
-    section { max-width: 800px; margin: 3rem auto; padding: 0 1rem; }
-    h2 { font-size: 1.75rem; margin-bottom: 1.5rem; border-bottom: 2px solid var(--accent); display: inline-block; }
-    
-    /* About */
-    .about-content { background: var(--card-bg); padding: 2rem; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.05); }
-    
-    /* Skills */
-    .skills-grid { display: flex; flex-wrap: wrap; gap: 0.75rem; }
-    .skill-tag { background: var(--accent); color: white; padding: 0.5rem 1rem; border-radius: 50px; font-size: 0.9rem; font-weight: 500; }
-    
-    /* Education */
-    .edu-item { background: var(--card-bg); padding: 1.5rem; margin-bottom: 1rem; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.05); }
-    .edu-item h3 { font-size: 1.25rem; margin-bottom: 0.25rem; }
-    .edu-item .meta { font-size: 0.9rem; color: #777; margin-bottom: 0.75rem; }
-    
-    /* Traveling */
-    .travel-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap: 1.5rem; }
-    .travel-card { background: var(--card-bg); border-radius: 8px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.05); }
-    .travel-card img { width: 100%; height: 140px; object-fit: cover; }
-    .travel-card .content { padding: 1rem; }
-    .travel-card h3 { font-size: 1.1rem; margin-bottom: 0.5rem; }
-    .travel-card p { font-size: 0.9rem; color: #666; }
-    
-    /* Contact */
-    .contact-links { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
-    .contact-links a { font-weight: 600; background: var(--card-bg); padding: 0.75rem 1.5rem; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.05); }
-    .contact-links a:hover { transform: translateY(-2px); }
-    
-    /* Footer */
-    footer { text-align: center; padding: 2rem; color: #888; font-size: 0.85rem; }
-    
-    @media (max-width: 600px) {
-      nav ul { gap: 1rem; }
-      .hero h1 { font-size: 2rem; }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Md. Arif Hossain | Businessman & Branch Manager</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        :root {
+            --primary: #1a365d;
+            --secondary: #2c5282;
+            --accent: #3182ce;
+            --light: #ebf8ff;
+            --dark: #1a202c;
+            --gray: #4a5568;
+        }
+
+        body {
+            line-height: 1.6;
+            color: var(--dark);
+            background: var(--light);
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin: 0 auto 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            border: 4px solid white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .title {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        /* Navigation */
+        nav {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 1rem;
+            flex-wrap: wrap;
+        }
+
+        nav li {
+            margin: 0 1rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--gray);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--accent);
+        }
+
+        /* Sections */
+        section {
+            padding: 3rem 1rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: var(--accent);
+            margin: 0.5rem auto 0;
+            border-radius: 2px;
+        }
+
+        /* Bio */
+        .bio-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .bio-card p {
+            font-size: 1.1rem;
+            color: var(--gray);
+            line-height: 1.8;
+        }
+
+        /* Education */
+        .education-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .edu-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-left: 4px solid var(--accent);
+        }
+
+        .edu-card h3 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .edu-card .level {
+            color: var(--accent);
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Skills */
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .skill-tag {
+            background: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            font-weight: 500;
+            color: var(--primary);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .skill-tag:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+        }
+
+        /* Work Experience */
+        .experience-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .experience-card h3 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .experience-card .duration {
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        /* Travel */
+        .travel-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .travel-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .travel-card .flag {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .travel-card h4 {
+            color: var(--primary);
+        }
+
+        .travel-card .year {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        /* Interests */
+        .interests-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+        }
+
+        .interest-item {
+            background: white;
+            padding: 1rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            color: var(--gray);
+        }
+
+        /* Contact */
+        .contact-section {
+            background: var(--primary);
+            color: white;
+        }
+
+        .contact-section .section-title {
+            color: white;
+        }
+
+        .contact-section .section-title::after {
+            background: white;
+        }
+
+        .contact-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .contact-item {
+            text-align: center;
+        }
+
+        .contact-item a {
+            display: inline-block;
+            background: white;
+            color: var(--primary);
+            padding: 1rem 2rem;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .contact-item a:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .contact-item span {
+            display: block;
+            margin-top: 0.5rem;
+            opacity: 0.8;
+            font-size: 0.9rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            nav ul {
+                padding: 0.5rem;
+            }
+
+            nav li {
+                margin: 0 0.5rem;
+            }
+
+            section {
+                padding: 2rem 1rem;
+            }
+        }
+    </style>
 </head>
 <body>
 
-<header>
-  <div class="logo">Your Name</div>
-  <nav>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#traveling">Traveling</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-</header>
+    <!-- Header -->
+    <header>
+        <div class="profile-img">MA</div>
+        <h1>Md. Arif Hossain</h1>
+        <p class="title">Businessman | Branch Manager | Operations & Team Leadership Professional</p>
+    </header>
 
-<!-- About Section -->
-<section id="about" class="hero">
-  <img src="https://via.placeholder.com/280" alt="Profile photo">
-  <h1>Your Name</h1>
-  <p>Your tagline or subtitle (e.g., "Web Developer & Travel Enthusiast")</p>
-</section>
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#travel">Travel</a></li>
+            <li><a href="#interests">Interests</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-<section>
-  <div class="about-content">
-    <h2>About Me</h2>
-    <p>Write a short bio about yourself here. Talk about who you are, what you do, your interests, and what makes you unique. This is your chance to tell your story!</p>
-  </div>
-</section>
+    <!-- About Section -->
+    <section id="about">
+        <h2 class="section-title">About Me</h2>
+        <div class="bio-card">
+            <p>I am a Businessman and Branch Manager dedicated to driving business growth, leading high-performing teams, and delivering exceptional customer service. With a strong commitment to professionalism, integrity, and results, I strive to create value and build lasting relationships in every aspect of my work.</p>
+        </div>
+    </section>
 
-<!-- Skills Section -->
-<section id="skills">
-  <h2>Skills</h2>
-  <div class="skills-grid">
-    <span class="skill-tag">HTML</span>
-    <span class="skill-tag">CSS</span>
-    <span class="skill-tag">JavaScript</span>
-    <span class="skill-tag">Python</span>
-    <span class="skill-tag">React</span>
-    <span class="skill-tag">Node.js</span>
-    <span class="skill-tag">SQL</span>
-    <span class="skill-tag">Git</span>
-    <span class="skill-tag">Figma</span>
-    <!-- Add more skills as needed -->
-  </div>
-</section>
+    <!-- Education Section -->
+    <section id="education">
+        <h2 class="section-title">Education</h2>
+        <div class="education-grid">
+            <div class="edu-card">
+                <span class="level">University</span>
+                <h3>Cumilla Victoria Government College</h3>
+                <p>University of Barura Shaheed Smriti Government College</p>
+            </div>
+            <div class="edu-card">
+                <span class="level">College</span>
+                <h3>Rangunia Govt. College</h3>
+                <p>Higher Secondary Education</p>
+            </div>
+            <div class="edu-card">
+                <span class="level">Secondary</span>
+                <h3>Rangunia MMP High School</h3>
+                <p>Shamshul Houqe Khan School & College</p>
+            </div>
+            <div class="edu-card">
+                <span class="level">Primary</span>
+                <h3>Rangunia Hordoya Kinder Garden School</h3>
+                <p>Early Education</p>
+            </div>
+        </div>
+    </section>
 
-<!-- Education Section -->
-<section id="education">
-  <h2>Education</h2>
-  
-  <div class="edu-item">
-    <h3>Degree Name – University</h3>
-    <div class="meta">2020 – 2024 • City, Country</div>
-    <p>Describe your major, achievements, or relevant coursework.</p>
-  </div>
-  
-  <div class="edu-item">
-    <h3>Another Degree – School</h3>
-    <div class="meta">2018 – 2020 • City, Country</div>
-    <p>Details about this education.</p>
-  </div>
-  <!-- Add more education items as needed -->
-</section>
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2 class="section-title">Skills</h2>
+        <div class="skills-container">
+            <span class="skill-tag">Leadership</span>
+            <span class="skill-tag">Strategic Planning</span>
+            <span class="skill-tag">Business Growth</span>
+            <span class="skill-tag">Team Management</span>
+            <span class="skill-tag">Customer Relations</span>
+            <span class="skill-tag">Problem Solving</span>
+            <span class="skill-tag">Decision Making</span>
+            <span class="skill-tag">Sales & Operations</span>
+        </div>
+    </section>
 
-<!-- Traveling Section -->
-<section id="traveling">
-  <h2>Traveling ✈️</h2>
-  <p style="margin-bottom: 1.5rem; color: #666;">Places I've visited and loved!</p>
-  
-  <div class="travel-grid">
-    <div class="travel-card">
-      <img src="https://via.placeholder.com/400x300" alt="Japan">
-      <div class="content">
-        <h3>Japan</h3>
-        <p>Visited Tokyo, Kyoto, and Osaka. Loved the food and culture!</p>
-      </div>
-    </div>
-    
-    <div class="travel-card">
-      <img src="https://via.placeholder.com/400x300" alt="Paris">
-      <div class="content">
-        <h3>Paris, France</h3>
-        <p>Amazing architecture and cafe culture.</p>
-      </div>
-    </div>
-    
-    <div class="travel-card">
-      <img src="https://via.placeholder.com/400x300" alt="Bali">
-      <div class="content">
-        <h3>Bali, Indonesia</h3>
-        <p>Beautiful beaches and stunning temples.</p>
-      </div>
-    </div>
-    
-    <div class="travel-card">
-      <img src="https://via.placeholder.com/400x300" alt="New York">
-      <div class="content">
-        <h3>New York, USA</h3>
-        <p>The city that never sleeps!</p>
-      </div>
-    </div>
-  </div>
-</section>
+    <!-- Experience Section -->
+    <section id="experience">
+        <h2 class="section-title">Work Experience</h2>
+        <div class="experience-card">
+            <h3>HR & General Manager</h3>
+            <p class="duration">7 Years of Experience</p>
+            <p>Experienced professional in Human Resources and General Management, with a proven track record of leading teams, optimizing operations, and driving organizational success.</p>
+        </div>
+    </section>
 
-<!-- Contact Section -->
-<section id="contact">
-  <h2>Contact</h2>
-  <p style="text-align: center; margin-bottom: 1.5rem;">Want to connect? Here's how you can reach me!</p>
-  <div class="contact-links">
-    <a href="mailto:youremail@example.com">Email</a>
-    <a href="https://linkedin.com/in/yourprofile">LinkedIn</a>
-    <a href="https://github.com/yourusername">GitHub</a>
-    <a href="https://twitter.com/yourhandle">Twitter</a>
-    <a href="https://instagram.com/yourhandle">Instagram</a>
-  </div>
-</section>
+    <!-- Travel Section -->
+    <section id="travel">
+        <h2 class="section-title">Travel History</h2>
+        <div class="travel-grid">
+            <div class="travel-card">
+                <div class="flag">🇮🇳</div>
+                <h4>India</h4>
+                <p class="year">2017, 2018, 2022</p>
+            </div>
+            <div class="travel-card">
+                <div class="flag">🇹🇷</div>
+                <h4>Turkey</h4>
+                <p class="year">2023</p>
+            </div>
+            <div class="travel-card">
+                <div class="flag">🇷🇴</div>
+                <h4>Romania</h4>
+                <p class="year">2023</p>
+            </div>
+            <div class="travel-card">
+                <div class="flag">🇸🇬</div>
+                <h4>Singapore</h4>
+                <p class="year">2023</p>
+            </div>
+            <div class="travel-card">
+                <div class="flag">🇦🇺</div>
+                <h4>Australia</h4>
+                <p class="year">2023</p>
+            </div>
+        </div>
+    </section>
 
-<footer>
-  © 2026 Your Name. All rights reserved.
-</footer>
+    <!-- Interests Section -->
+    <section id="interests">
+        <h2 class="section-title">Interests & Hobbies</h2>
+        <div class="interests-grid">
+            <div class="interest-item">Business Development</div>
+            <div class="interest-item">Leadership Learning</div>
+            <div class="interest-item">Networking</div>
+            <div class="interest-item">Reading</div>
+            <div class="interest-item">Travel</div>
+            <div class="interest-item">Personal Growth</div>
+            <div class="interest-item">Community Engagement</div>
+            <div class="interest-item">Sports & Fitness</div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <h2 class="section-title">Contact Me</h2>
+        <div class="contact-links">
+            <div class="contact-item">
+                <a href="mailto:arifraaz777@gmail.com">Email Me</a>
+                <span>arifraaz777@gmail.com</span>
+            </div>
+            <div class="contact-item">
+                <a href="https://www.facebook.com/share/1JeBs2UWXK/?mibextid=wwXIfr" target="_blank">Facebook</a>
+                <span>Connect on Facebook</span>
+            </div>
+            <div class="contact-item">
+                <a href="https://instagram.com/saalman_faraaz" target="_blank">Instagram</a>
+                <span>@saalman_faraaz</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Md. Arif Hossain. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
 
 </body>
 </html>
